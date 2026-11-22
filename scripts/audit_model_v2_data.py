@@ -89,11 +89,11 @@ def profile_file(path: Path, root: Path, chunksize: int = 100_000) -> dict[str, 
  dates = {'min': date_min.isoformat(), 'max': date_max.isoformat(), 'unparsed_count': int(date_unparsed)} if date_min is not None else None
  return {'path': str(path.relative_to(root)), 'bytes': path.stat().st_size, 'delimiter': delimiter,
   'rows': rows, 'columns': columns, 'detected_fields': detected, 'missingness': missing,
-  'duplicate_key_rows': {'case_id': int(totals['duplicate::case_id']), 'primary_id': int(totals['duplicate::primary_id'])},
+  'repeated_identifier_occurrences': {'case_id': int(totals['duplicate::case_id']), 'primary_id': int(totals['duplicate::primary_id'])},
   'report_date': dates, 'value_counts_top_100': {k: dict(v.most_common(100)) for k,v in value_counts.items()},
   'sertraline_name_matches': int(sertraline_matches) if 'drug_name' in detected else None,
   'warnings': ['Alias detection is provisional; confirm against the source release data dictionary.',
-   'Duplicate counts are repeated key occurrences beyond the first, not all rows in duplicate groups.',
+   'Repeated identifiers are common in relational FAERS tables (for example, one case can have multiple drugs/reactions); this is not a duplicate-report count.',
    'FAERS follow-up version resolution and ingredient normalization require separate reviewed rules.']}
 
 def main() -> int:
