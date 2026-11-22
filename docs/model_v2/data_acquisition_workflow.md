@@ -101,7 +101,8 @@ New-Item -ItemType Directory -Force data/model_v2/raw/dailymed | Out-Null
 # Copy your existing local CSV/TSV files into incoming/local_existing.
 # Do not move or overwrite the originals.
 
-python scripts/build_model_v2_manifest.py --data-dir data --output reports/model_v2/source_manifest.json`r`npython scripts/audit_model_v2_data.py --data-dir data --output reports/model_v2/phase1_data_audit.json
+python scripts/build_model_v2_manifest.py --data-dir data --output reports/model_v2/source_manifest.json
+python scripts/audit_model_v2_data.py --data-dir data --output reports/model_v2/phase1_data_audit.json
 ```
 
 Download quarterly FAERS/AEMS ASCII ZIPs manually from the official FDA page into data/model_v2/raw/faers/quarterly/. Extract each ZIP into a quarter-specific subfolder, for example 2025Q4/. Do not rename internal source tables unless the original name is preserved in the manifest.
