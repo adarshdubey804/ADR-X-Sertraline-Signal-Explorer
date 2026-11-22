@@ -123,7 +123,7 @@ Each file record must include: source_id, source_name, source_url, source_releas
 
 ## Phase 1 exit criteria
 
-Phase 1 is complete only when the audit report has actual row/column counts, source release metadata, case/version and primary-ID diagnostics, sertraline drug-role counts, event/outcome distributions, missingness, date coverage, and a documented curated label manifest. The data owner must approve mappings and exclusions. No model training is permitted before these checks pass.
+Phase 1 is complete only when the audit report has actual row/column counts, source release metadata, case/version and primary-ID repetition diagnostics, sertraline drug-role counts, event/outcome distributions, missingness, date coverage, and a documented curated label manifest. The data owner must approve mappings and exclusions. No model training is permitted before these checks pass.
 
 ## Scientific caveat
 
