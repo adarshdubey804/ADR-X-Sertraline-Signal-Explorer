@@ -1,0 +1,72 @@
+{
+  "manifest_version": "1.0",
+  "project": "ADR-X Model v2",
+  "generated_at_utc": null,
+  "files": [
+    {
+      "source_id": "faers_aems_2025Q4",
+      "source_name": "FDA FAERS/AEMS quarterly ASCII extract",
+      "source_url": "https://fis.fda.gov/extensions/FPD-QDE-FAERS/FPD-QDE-FAERS.html",
+      "source_release_or_quarter": "2025Q4",
+      "retrieved_at_utc": null,
+      "local_relative_path": "data/model_v2/raw/faers/quarterly/2025Q4/",
+      "sha256": null,
+      "byte_size": null,
+      "license_or_terms": "Review official FDA terms and source documentation",
+      "table_name": "DEMO/DRUG/REAC/OUTC/INDI/THER/RPSR",
+      "date_coverage": null,
+      "source_notes": "Quarterly extract; not cumulative. Replace example quarter with actual downloaded release.",
+      "data_stage": "raw"
+    },
+    {
+      "source_id": "sider_4_1",
+      "source_name": "SIDER 4.1",
+      "source_url": "https://sideeffects.embl.de/",
+      "source_release_or_quarter": "4.1 (verify artifact)",
+      "retrieved_at_utc": null,
+      "local_relative_path": "data/model_v2/raw/sider/",
+      "sha256": null,
+      "byte_size": null,
+      "license_or_terms": "Verify exact artifact license; processed SIDER4 repository reports CC BY-NC-SA 4.0 for derivatives",
+      "table_name": "side effects / indications",
+      "date_coverage": null,
+      "source_notes": "Positive association candidate only; absence is not a negative label.",
+      "data_stage": "raw"
+    },
+    {
+      "source_id": "dailymed_sertraline_labels",
+      "source_name": "DailyMed SPL labels",
+      "source_url": "https://dailymed.nlm.nih.gov/dailymed/",
+      "source_release_or_quarter": "Capture SPL version/effective date",
+      "retrieved_at_utc": null,
+      "local_relative_path": "data/model_v2/raw/dailymed/",
+      "sha256": null,
+      "byte_size": null,
+      "license_or_terms": "Review source terms",
+      "table_name": "SPL label sections",
+      "date_coverage": null,
+      "source_notes": "Use sertraline-specific labels; preserve set ID and manufacturer. Absence is not a negative label.",
+      "data_stage": "raw"
+    },
+    {
+      "source_id": "pharmgkb_sertraline",
+      "source_name": "PharmGKB",
+      "source_url": "https://www.pharmgkb.org/downloads",
+      "source_release_or_quarter": "Capture release/version",
+      "retrieved_at_utc": null,
+      "local_relative_path": "data/model_v2/raw/pharmgkb/",
+      "sha256": null,
+      "byte_size": null,
+      "license_or_terms": "Review PharmGKB data usage terms",
+      "table_name": "drug-gene annotations",
+      "date_coverage": null,
+      "source_notes": "Mechanistic evidence only; not measured patient genotype.",
+      "data_stage": "raw"
+    }
+  ],
+  "notes": [
+    "Template only. Replace all example values with actual retrieval metadata.",
+    "Do not commit raw or restricted data to GitHub.",
+    "Keep population and report-level data and targets separate."
+  ]
+}
