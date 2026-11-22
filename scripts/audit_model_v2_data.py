@@ -38,7 +38,8 @@ def normalize_column(value: Any) -> str:
 
 
 def sniff_delimiter(path: Path) -> str:
-    sample = path.read_text(encoding="utf-8-sig", errors="replace")[:20000]
+    with path.open("r", encoding="utf-8-sig", errors="replace", newline="") as handle:
+        sample = handle.read(20000)
     try:
         return csv.Sniffer().sniff(sample, delimiters="\t,$|;").delimiter
     except csv.Error:
