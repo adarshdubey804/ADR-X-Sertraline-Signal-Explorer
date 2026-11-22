@@ -1,0 +1,14 @@
+raw/
+incoming/
+extracted/
+interim/
+curated/
+processed/
+*.zip
+*.gz
+*.7z
+*.parquet
+*.feather
+*.db
+*.sqlite
+*.sqlite3
