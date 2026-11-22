@@ -65,7 +65,7 @@ def main() -> int:
     }
     output = args.output.resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(report, indent=2, ensure_ascii=False) + '\\n', encoding='utf-8')
+    output.write_text(json.dumps(report, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
     print(f"Manifest contains {len(report['files'])} file(s): {output}")
     return 0
 
